@@ -1,0 +1,245 @@
+<html>
+    <head>
+        <title>multi array</title>
+        
+    </head>
+    <body style="background-color: beige;">
+        <h1 style="background-color: grey;">MULTI-DIMENSION ARRAYS</h1><br>
+        <li><a href="main.html">HOME</a></li>
+        <br>
+        <details>
+         <summary>1. Enter the four number from user and print it into matrix</summary>
+        <pre>
+#include&lt;stdio.h>
+
+int main(){
+    int i,j,a[2][3]={1,2,3,4,5,6};
+    
+    for(i=0;i<=1;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+             printf("%d\t",a[i][j]);
+        }
+        printf("\n");
+    }
+   
+}
+output:--
+1       2       3
+4       5       6</pre>
+        </details>
+        <details>
+          <summary>2. Enter the matrix from and transpose them.</summary>
+        <pre>
+#include&lt;stdio.h>
+void main()
+{
+   int i,j,a[2][3]={1,2,3,4,5,6};
+   for(i=0;i<=1;i++)
+   {
+    for(j=0;j<=2;j++)
+    {
+        printf("%d\t",a[i][j]);
+    }
+    printf( "\n");
+   }
+   printf("\n");
+    printf("transpose :");
+    printf("\n");
+        
+   for(i=0;i<=2;i++)
+   {
+    for(j=0;j<=1;j++)
+    {
+       
+        printf("%d\t",a[i][j]);
+    }
+    printf( "\n");
+   }
+  
+   
+}
+outpput:=
+1       2       3
+4       5       6
+
+transpose :
+1       2
+4       5
+0       2</pre>
+        </details>
+        <details>
+          <summary>3. Enter 2 matrix from user and add them.</summary>
+        <pre>
+#include &lt;stdio.h>
+
+void main() {
+  int rows, cols;
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+    printf("Enter the number of columns: ");
+    scanf("%d", &cols);
+    int matrixA[rows][cols], matrixB[rows][cols], sumMatrix[rows][cols];
+    
+    printf("\nEnter elements for Matrix A:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            
+            scanf("%d", &matrixA[i][j]);
+        }
+    }
+
+    printf("\nEnter elements for Matrix B:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            
+            scanf("%d", &matrixB[i][j]);
+        }
+    }
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            sumMatrix[i][j] = matrixA[i][j] + matrixB[i][j];
+        }
+    }
+    printf("\nSum of the two matrices:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d\t", sumMatrix[i][j]);
+        }
+        printf("\n");
+    }
+}
+output:-
+Enter the number of rows: 2
+Enter the number of columns: 2
+
+Enter elements for Matrix A:
+11
+11
+11
+11
+
+Enter elements for Matrix B:
+12
+12
+1
+12
+
+Sum of the two matrices:
+23      23
+12      23
+</pre>
+        </details>
+        <details>
+          <summary>4. Enter 2 matrix from user and subtract them.</summary>
+        <pre>
+#include&lt;stdio.h>
+int main() {
+    int rows, cols;  
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+    printf("Enter the number of columns: ");
+    scanf("%d", &cols);
+   
+    int matrixA[rows][cols], matrixB[rows][cols], sumMatrix[rows][cols];
+
+    printf("\nEnter elements for Matrix A:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            
+            scanf("%d", &matrixA[i][j]);
+        }
+    }
+
+    printf("\nEnter elements for Matrix B:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            
+            scanf("%d", &matrixB[i][j]);
+        }
+    }
+  
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            sumMatrix[i][j] = matrixA[i][j] -2
+            
+         matrixB[i][j];
+        }
+    } 
+    printf("\nSum of the two matrices:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d\t", sumMatrix[i][j]);
+        }
+        printf("\n");
+    }
+}</pre>
+        </details>
+        <details>
+          <summary>5. Enter 2 matrix from user and multiply them.</summary>
+        <pre> 
+#include&lt;stdio.h>
+void main() {
+int rows, cols;
+
+    
+printf("Enter the number of rows: ");
+scanf("%d", &rows);
+printf("Enter the number of columns: ");
+scanf("%d", &cols);
+
+int matrixA[rows][cols], matrixB[rows][cols], sumMatrix[rows][cols];
+    printf("\nEnter elements for Matrix A:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            
+            scanf("%d", &matrixA[i][j]);
+        }
+    }
+    printf("\nEnter elements for Matrix B:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            
+            scanf("%d", &matrixB[i][j]);
+        }
+    }
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            sumMatrix[i][j] = matrixA[i][j] * matrixB[i][j];
+        }
+    }
+    printf("\nSum of the two matrices:\n");
+    for (int i = 0; i < rows; i++) {
+for (int j = 0; j < cols; j++) {
+printf("%d\t", sumMatrix[i][j]);
+}
+printf("\n");
+    }
+}
+output:=
+
+Enter the number of rows: 2
+Enter the number of columns: 2
+
+Enter elements for Matrix A:
+2
+2
+2
+2
+
+Enter elements for Matrix B:
+2
+2
+2
+3
+
+Sum of the two matrices:
+4       4
+4       6</pre>
+        </details>
+      
+    </details>
+
+    </body>
+</html>

@@ -1,0 +1,282 @@
+<html>
+    <head>
+        <title>function</title>
+    </head>
+    <body style="background-color: beige;">
+        <h1 style="background-color: grey;font-size: 50;">FUNCTIONS</h1>
+        <LI><a href="main.html">HOME</a></LI>
+        <br>
+        <!-- Topic 3: Functions -->
+        <details >
+          <summary>1. Write a program for basic arithmetic operations using functions.</summary>
+          <div class="code-solution"><pre>
+#include &lt;stdio.h>
+
+
+int add(int a, int b) {
+    return a + b;
+}
+
+// function to subtract
+int sub(int a, int b) {
+    return a - b;
+}
+
+// function to multiply
+int mul(int a, int b) {
+    return a * b;
+}
+
+// function to divide
+float divi(int a, int b) {
+    return (float)a / b;
+}
+
+int main() {
+    int x, y;
+
+    printf("Enter two numbers for addition: ");
+    scanf("%d %d", &x, &y);
+    printf("Answer = %d\n\n", add(x, y));
+
+    printf("Enter two numbers for subtraction: ");
+    scanf("%d %d", &x, &y);
+    printf("Answer = %d\n\n", sub(x, y));
+
+    printf("Enter two numbers for addition: ");
+    scanf("%d %d", &x, &y);
+    printf("Answer = %d\n\n", add(x, y));
+
+    printf("Enter two numbers for multiplication: ");
+    scanf("%d %d", &x, &y);
+    printf("Answer = %d\n\n", mul(x, y));
+
+    printf("Enter two numbers for subtraction: ");
+    scanf("%d %d", &x, &y);
+    printf("Answer = %d\n\n", sub(x, y));
+
+    printf("Enter two numbers for multiplication: ");
+    scanf("%d %d", &x, &y);
+    printf("Answer = %d\n\n", mul(x, y));
+
+    printf("Enter two numbers for division: ");
+    scanf("%d %d", &x, &y);
+    printf("Answer = %.2f\n\n", divi(x, y));
+
+    printf("Enter two numbers for division: ");
+    scanf("%d %d", &x, &y);
+    printf("Answer = %.2f\n\n", divi(x, y));
+
+    printf("Enter two numbers for addition: ");
+    scanf("%d %d", &x, &y);
+    printf("Answer = %d\n", add(x, y));
+
+   
+}
+
+output==
+Enter two numbers for addition: 4 6
+Answer = 10
+
+Enter two numbers for subtraction: 8 3
+Answer = 5
+
+Enter two numbers for addition: 2 7
+Answer = 9
+
+Enter two numbers for multiplication: 3 4
+Answer = 12
+
+Enter two numbers for subtraction: 10 2
+Answer = 8
+
+Enter two numbers for multiplication: 2 5
+Answer = 10
+
+Enter two numbers for division: 8 2
+Answer = 4.00
+
+Enter two numbers for division: 7 2
+Answer = 3.50
+
+Enter two numbers for addition: 1 9
+Answer = 10
+
+</pre>
+        </details>
+        <details >
+          <summary >2. Write a program to enter 10 number from the user add the number and display the answer.</summary>
+          <div class="code-solution"><pre>
+#include&lt;stdio.h>
+void main() {
+int num, sum = 0;   
+int i;              
+
+    printf("Enter 10 numbers:\n");
+
+    for(i = 1; i <= 10; i++) {
+        printf("Enter number %d: ", i);
+        scanf("%d", &num);
+        sum = sum + num;   
+    }
+    printf("\nTotal sum = %d", sum); 
+}
+outputt
+
+Enter 10 numbers:
+Enter number 1: 1
+Enter number 2: 1
+Enter number 3: 2
+Enter number 4: 3
+Enter number 5: 5
+Enter number 6: 6
+Enter number 7: 8
+Enter number 8: 8
+Enter number 9: 6
+Enter number 10: 5
+
+Total sum = 45
+</pre>
+        </details>
+        <details >
+          <summary >3. Write a program to return an array from function.</summary>
+          <div class="code-solution"><pre>
+#include &lt;stdio.h>
+int* arrayreturn(){
+
+    static int arr[10]={1,2,3,4,5,6,7,8,9,0};
+    return arr;
+}
+int main(){
+    int *p,size=10;
+    p=arrayreturn();
+    for (int i=0; i<10 ; i++){
+        printf("\n%d\n", *p );      
+        p++;
+    }
+    
+}
+outputt==
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+0
+</pre>
+        </details>
+        <details >
+          <summary >4. Make functions for Factorial, Reverse, Palindrome, Prime, Armstrong, Fibonacci.</summary>
+          <pre></pre>
+        </details>
+        <details >
+          <summary >5. Swap numbers using Call by reference.</summary>
+         <pre>
+ #include &lt;stdio.h>
+void swap(int *a, int *b) {
+    int temp;
+
+    temp = *a;   // store value of a in temp
+    *a = *b;     // put value of b in a
+    *b = temp;   // put value of temp (old a) in b
+
+    printf("Inside function after swapping: a = %d, b = %d\n", *a, *b);
+}
+
+void main() {
+    int x, y;
+
+    printf("Enter first number: ");
+    scanf("%d", &x);
+
+    printf("Enter second number: ");
+    scanf("%d", &y);
+
+    printf("\nBefore swapping: x = %d, y = %d\n", x, y);
+
+    swap(&x, &y);   // call function and pass addresses
+
+    printf("After swapping (in main): x = %d, y = %d\n", x, y);
+}
+</pre>
+        </details>
+        <details >
+          <summary >6. Swap numbers using Call by function.</summary>
+          <pre>
+#include &lt;stdio.h>
+int main(){
+    int a=6,b=8;    
+    int *p=&a,*q=&b, c;
+
+   c=*p;
+    *p=*q;
+    *q=c;
+
+    printf("%d and %d ",*p,*q);
+
+}
+outputt==
+8 and 6 
+</pre>
+        </details>
+        <details >
+          <summary >7. Make function for find out power of number.</summary>
+        <pre>
+ #include &lt;stdio.h>
+void main() {
+    int base, power, i, result = 1;
+
+    printf("Enter base number: ");
+    scanf("%d", &base);
+
+    printf("Enter power: ");
+    scanf("%d", &power);
+
+    for(i = 1; i <= power; i++) {
+        result = result * base;  
+    }
+
+    printf("%d raised to %d is = %d", base, power, result);
+}
+ outputt
+ Enter base number: 5
+Enter power: 2 
+5 raised to 2 is = 25          
+        </pre>
+        </details>
+        <details >
+          <summary >8. Make function for find out Cube a user entered number.</summary>
+          <div class="code-solution"><pre>
+#include &lt;stdio.h
+int cube(int n) {
+    return n * n * n;   
+}
+void main() {
+    int num, result;
+    printf("Enter any number: ");
+    scanf("%d", &num);
+    result = cube(num);   // call the cube function
+    printf("Cube of %d is = %d", num, result);
+}
+output
+Enter any number: 5
+Cube of 5 is = 125
+</pre>
+        </details>
+      
+    </details>
+    </body>
+</html>
